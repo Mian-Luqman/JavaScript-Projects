@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBites - Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">TastyBites</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#cart">Cart <span class="cart-count">0</span></a>
+                <a onclick="showLoginModal()">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered</h1>
+            <p>Experience the finest cuisines from your favorite local restaurants</p>
+            <button class="cta-button">Order Now</button>
+        </div>
+    </section>
+
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for restaurants or dishes...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="auth-button">Login</button>
+                <div class="switch-form">
+                    <p>Don't have an account? <a onclick="switchToRegister()">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeRegisterModal()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <button type="submit" class="auth-button">Register</button>
+                <div class="switch-form">
+                    <p>Already have an account? <a onclick="switchToLogin()">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="categories">
+        <h2 class="section-title">Food Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-image"></div>
+                <div class="category-content">
+                    <h3>Pizza</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <div class="category-content">
+                    <h3>Burgers</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <div class="category-content">
+                    <h3>Sushi</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <div class="category-content">
+                    <h3>Desserts</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-items">
+        <h2 class="section-title">Popular Items</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="item-image"></div>
+                <div class="item-content">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Classic pepperoni pizza with fresh mozzarella</p>
+                    <div class="item-price">$14.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-image"></div>
+                <div class="item-content">
+                    <h3>Cheeseburger</h3>
+                    <p>Juicy beef patty with melted cheese</p>
+                    <div class="item-price">$9.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-image"></div>
+                <div class="item-content">
+                    <h3>California Roll</h3>
+                    <p>Fresh avocado and crab meat roll</p>
+                    <div class="item-price">$12.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TastyBites delivers the best food from your favorite local restaurants right to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@tastybites.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon-Sun: 10:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
